@@ -74,10 +74,10 @@ MotionInput currentInput;
 WheelState wheelFL, wheelFR, wheelRL, wheelRR;
 
 void init_wheelState() {
-    wheelFL = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 0, .name="Front Left", .StepPin = 3, .DirPin = 2};
-    wheelRL = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 0, .name="Rear Left", .StepPin = 5, .DirPin = 4};
-    wheelFR = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 1, .name="Front Right", .StepPin = 7, .DirPin = 6};
-    wheelRR = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 1, .name="Rear Right", .StepPin = 9, .DirPin = 8};
+    wheelFL = (WheelState){.current_delay_us = -1, .default_direction = 0, .name="Front Left", .StepPin = 3, .DirPin = 2};
+    wheelRL = (WheelState){.current_delay_us = -1, .default_direction = 0, .name="Rear Left", .StepPin = 5, .DirPin = 4};
+    wheelFR = (WheelState){.current_delay_us = -1, .default_direction = 1, .name="Front Right", .StepPin = 7, .DirPin = 6};
+    wheelRR = (WheelState){.current_delay_us = -1, .default_direction = 1, .name="Rear Right", .StepPin = 9, .DirPin = 8};
 }
 
 void printInputState() {
@@ -130,10 +130,10 @@ void set_direction(WheelState* w) {
 //also set wheel direction
 void update_wheel_speeds() {
 
-    wheelFL.current_speed = currentInput.y - currentInput.x - (WHEEL_GEOMETRY*currentInput.w);
-    wheelRL.current_speed = currentInput.y + currentInput.x - (WHEEL_GEOMETRY*currentInput.w);
-    wheelRR.current_speed = currentInput.y - currentInput.x + (WHEEL_GEOMETRY*currentInput.w);
-    wheelFR.current_speed = currentInput.y + currentInput.x + (WHEEL_GEOMETRY*currentInput.w);
+    wheelFL.current_speed = currentInput.y - currentInput.x + (WHEEL_GEOMETRY*currentInput.w);
+    wheelRL.current_speed = currentInput.y + currentInput.x + (WHEEL_GEOMETRY*currentInput.w);
+    wheelRR.current_speed = currentInput.y - currentInput.x - (WHEEL_GEOMETRY*currentInput.w);
+    wheelFR.current_speed = currentInput.y + currentInput.x - (WHEEL_GEOMETRY*currentInput.w);
 
     
 
