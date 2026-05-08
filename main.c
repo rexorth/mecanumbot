@@ -74,10 +74,10 @@ MotionInput currentInput;
 WheelState wheelFL, wheelFR, wheelRL, wheelRR;
 
 void init_wheelState() {
-    wheelFL = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 0, .name="Front Left", .StepPin = 2, .DirPin = 3};
-    wheelRL = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 0, .name="Rear Left", .StepPin = 4, .DirPin = 5};
-    wheelFR = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 1, .name="Front Right", .StepPin = 6, .DirPin = 7};
-    wheelRR = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 1, .name="Rear Right", .StepPin = 8, .DirPin = 9};
+    wheelFL = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 0, .name="Front Left", .StepPin = 3, .DirPin = 2};
+    wheelRL = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 0, .name="Rear Left", .StepPin = 5, .DirPin = 4};
+    wheelFR = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 1, .name="Front Right", .StepPin = 7, .DirPin = 6};
+    wheelRR = (WheelState){.current_delay_us = MIN_STEP_DELAY, .default_direction = 1, .name="Rear Right", .StepPin = 9, .DirPin = 8};
 }
 
 void printInputState() {

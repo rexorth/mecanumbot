@@ -1,0 +1,1 @@
+cp ~/source/mecanumbot/build/MecanumBot.uf2 /media/rex/RP2350/
