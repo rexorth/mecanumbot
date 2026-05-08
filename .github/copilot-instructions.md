@@ -57,10 +57,10 @@ The left stick controls translation (x/y), the right stick X-axis controls rotat
 Each wheel is a `WheelState` struct holding speed, step delay, accumulated time, direction, and GPIO pin assignments. Stepper motors are driven by toggling step pins at computed intervals. `default_direction` encodes the physical mounting orientation (left wheels vs right wheels spin opposite directions for forward motion).
 
 **GPIO pin mapping:**
-- Front Left: Step=2, Dir=3
-- Rear Left: Step=4, Dir=5
-- Front Right: Step=6, Dir=7
-- Rear Right: Step=8, Dir=9
+- Front Left: Step=3, Dir=2
+- Rear Left: Step=5, Dir=4
+- Front Right: Step=7, Dir=6
+- Rear Right: Step=9, Dir=8
 - PWM control timer: GPIO 15
 
 ### Source Files
